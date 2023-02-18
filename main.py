@@ -55,7 +55,6 @@ def main():
 
     number_of_page_mvideo = find_number_of_pages_mvideo(create_driver(), search_name)
     for i in range(0, number_of_page_mvideo):
-        print('cicl')
         list_result_mvideo.append(parse_mvideo_page(create_driver(), search_name, i))
     if result_data_type == 'csv':
         if stat('./result.csv').st_size != 0:
